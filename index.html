@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="{{ url_for('static', filename='index.js') }}"></script>
+        <title>index</title>
+    </head>
+    <body>
+        <div class="container">
+            
+            <h1 id="result"></h1>
+            
+
+            Enter new display name:
+            <br>
+            <form id="form">
+                <input id="displayname" autocomplete="off" autofocus placeholder="Enter display name" type="text">
+                <input type="submit" value="Update">
+            </form>
+            <br>
+            <form action="{{ url_for('channel_list') }}" method="post">
+        
+                <div class="form-group">
+                    <button class="btn btn-primary">Channel List</button>
+                </div>
+        
+            </form>
+
+        </div>
+    </body>
+</html>

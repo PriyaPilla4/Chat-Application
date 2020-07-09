@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+        <script type="text/javascript" src="http://www.datejs.com/build/date.js"></script>
+        <script type="text/javascript"></script>
+        <script src="{{ url_for('static', filename='channel.js') }}"></script>
+        <title>Channel</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>
+                Channel 
+            </h1>
+        
+            <h4>
+                Display name: {{displayname}}
+                <br>
+                Channel name: {{channel}}
+            </h4>
+            
+            <div class="message_holder"></div>
+
+            <form action="" method="POST">
+                <input type="hidden" class="channel" value={{channel}} id="channelname"> 
+                <input type="hidden" class="username" value={{displayname}} id="disname">
+                <input type="text" class="message" placeholder="type message..."/>
+                
+                <div class="form-group">
+                    <br>
+                    <select class="form-control select2" name="emoji" id="emoji">
+                        
+                        <option value="none" selected="selected">Select an emoji...</option>
+                        <option value= "smiley_face">Smiley face </option>
+                        <option value= "winking_face">Winking face </option>
+                        <option value= "heart_eyes_face">Heart eyes face </option>
+                        <option value= "laughing_face">Laughing face </option>
+                    
+                    </select>
+                </div>
+    
+                <script>
+                $('.select2').select2();
+                </script>
+                
+                <br>
+                <input type="submit"/>
+            </form>
+
+        </div>
+    </body>
+</html>    
