@@ -2,7 +2,6 @@
 
 Web Programming with Python and JavaScript
 
-For the personal touch, I added a feature that lets the user send emojis with the messages
 
 application.py : the main program for running the webpage
 index.html: for entering display name
