@@ -1,6 +1,4 @@
-# Project 2
-
-Web Programming with Python and JavaScript
+# Chat Application
 
 
 application.py : the main program for running the webpage
